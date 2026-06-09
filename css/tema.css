@@ -135,7 +135,6 @@ p:has(> .links) {
   margin: 1rem auto;
 }
 
-/* Tablet */
 @media (max-width: 1024px) {
   main {
     width: min(100% - 2rem, 850px);
@@ -160,7 +159,6 @@ p:has(> .links) {
   }
 }
 
-/* Mobil */
 @media (max-width: 768px) {
   main {
     width: 100%;

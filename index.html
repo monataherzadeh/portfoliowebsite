@@ -54,23 +54,6 @@
       <h2>af mona taherzadeh</h2>
       <h3>multimediedesignstuderende på EK</h3>
     </main>
-    <script>
-      const btn = document.getElementById("burgerBtn");
-      const menu = document.getElementById("mobileMenu");
-
-      btn.addEventListener("click", () => {
-        const isOpen = menu.classList.toggle("open");
-        btn.classList.toggle("open", isOpen);
-        document.body.style.overflow = isOpen ? "hidden" : "";
-      });
-
-      menu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          menu.classList.remove("open");
-          btn.classList.remove("open");
-          document.body.style.overflow = "";
-        });
-      });
-    </script>
+    <script src="js/menu.js"></script>
   </body>
 </html>
