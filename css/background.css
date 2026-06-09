@@ -7,6 +7,7 @@ body {
   position: relative;
 }
 
+/* ligger indhold over baggrunden */
 main {
   position: relative;
   z-index: 2;
@@ -102,10 +103,6 @@ main {
   filter: drop-shadow(0 0 8px rgba(239, 190, 211, 0.5));
 }
 
-.nav-flower:hover::after {
-  opacity: 0;
-}
-
 @keyframes flowerDance {
   0% {
     transform: rotate(-6deg);
@@ -147,7 +144,7 @@ main {
   transform-origin: center;
 }
 
-/* Åben tilstand — X */
+/* Laver X'et på burgermenuen */
 .burger-btn.open span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -158,7 +155,6 @@ main {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Mobil overlay-menu */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -177,7 +173,6 @@ main {
   opacity: 1;
 }
 
-/* Hover på mobil-menu blomster */
 .mobile-menu a {
   position: relative;
   display: flex;
