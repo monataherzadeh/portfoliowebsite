@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-VariableFont_wdth\,wght.woff2")
+    format("woff2-variations");
+  font-weight: 200 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BlackAndWhitePicture";
+  src: url("../fonts/BlackAndWhitePicture-Regular.woff2")
+    format("woff2-variations");
+  font-weight: 200 700;
+  font-style: normal;
+}

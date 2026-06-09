@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/tema.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="icon" href="img/blomst1.svg" type="image/svg+xml" />
+    <title>Grundlæggende web</title>
+  </head>
+  <body>
+    <button class="burger-btn" id="burgerBtn" aria-label="Åbn menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="index.html" data-label="Forside">
+        <img src="img/blomst1.svg" alt="Forside" />
+      </a>
+      <a href="portfolio.html" data-label="Portfolio">
+        <img src="img/blomst2.svg" alt="Portfolio" />
+      </a>
+      <a href="omMig.html" data-label="Om mig">
+        <img src="img/blomst3.svg" alt="Om mig" />
+      </a>
+    </nav>
+
+    <header>
+      <nav class="flower-nav">
+        <a class="nav-flower" href="index.html" data-label="Forside">
+          <img src="img/blomst1.svg" alt="Forside" />
+        </a>
+        <a class="nav-flower" href="portfolio.html" data-label="Portfolio">
+          <img src="img/blomst2.svg" alt="Portfolio" />
+        </a>
+        <a class="nav-flower" href="omMig.html" data-label="Om mig">
+          <img src="img/blomst3.svg" alt="Om mig" />
+        </a>
+      </nav>
+    </header>
+
+    <div class="background-flowers">
+      <img src="img/blomst3.svg" alt="" class="flower flower1" />
+      <img src="img/blomst2.svg" alt="" class="flower flower2" />
+      <img src="img/blomst1.svg" alt="" class="flower flower3" />
+    </div>
+
+    <main>
+      <h1>Grundlaeggende web</h1>
+      <p>
+        Tema 2 gav mig en grundlæggende introduktion til de værktøjer og
+        metoder, som vi arbejdede med på 1. semester. Gennem temaets opgaver fik
+        jeg mine første erfaringer med webudvikling, responsivt design og
+        udvikling af brugergrænseflader. I undervisningen blev jeg introduceret
+        til HTML, CSS, semantisk opbygning af hjemmesider, layoutdesign og
+        grundlæggende designprincipper.
+      </p>
+      <p>
+        I dette tema arbejdede vi med to opgaver: et mobilesite og
+        studiestartsprøven.
+      </p>
+      <h2>Min løsning</h2>
+      <h3>Mobilesite</h3>
+      <p>
+        I opgaven med mobilesitet lærte vi at bygge en hjemmeside fra bunden. Vi
+        fik udleveret en wireframe, billeder og tekst, som dannede grundlag for
+        hjemmesidens struktur og layout. Formålet med opgaven var at lære at
+        kode en responsivt hjemmeside med fokus på mobile-first-princippet, så
+        siden fungerede og så godt ud på mindre skærme.
+      </p>
+      <p>
+        Derudover arbejdede vi med de designprincipper, vi havde lært i
+        undervisningen, og implementerede dem i vores CSS for at skabe et mere
+        brugervenligt og visuelt sammenhængende design.
+      </p>
+      <p>
+        <a
+          class="linksMinus"
+          href="https://monataherzadeh.github.io/mobilesite/"
+          target="_blank"
+        >
+          Besøg min mobilesite her
+        </a>
+      </p>
+      <h3>Studiestartsprøve</h3>
+      <p>
+        Studiestartsprøven byggede videre på mobilesitet, hvor opgaven var at
+        tilpasse hjemmesiden til desktopvisning. Her arbejdede jeg videre med
+        responsivt design og lærte, hvordan et layout kan tilpasses forskellige
+        skærmstørrelser ved hjælp af CSS.
+      </p>
+      <figure>
+        <img
+          class="tema-billede"
+          src="img/tema2.webp"
+          alt="Screenshot fra mit studiestartsprøve opgave"
+        />
+        <figcaption>Et billede af forsiden på min studiestartsprøve</figcaption>
+      </figure>
+      <p>
+        <a
+          class="links"
+          href="https://monataherzadeh.github.io/website/index.html"
+          target="_blank"
+        >
+          Besøg min studiestartsprøve her
+        </a>
+      </p>
+      <h2>Min læring</h2>
+      <p>
+        I tema 2 lærte jeg grundlæggende HTML og CSS og fik en forståelse for,
+        hvordan kode og design går hånd i hånd. Jeg lærte at omsætte en
+        wireframe til en færdig hjemmeside og oplevede, hvordan selv små
+        ændringer i koden kunne påvirke både layout og brugeroplevelse. Gennem
+        arbejdet med opgaverne blev jeg også introduceret til designprincipper,
+        som hjalp mig med at skabe mere gennemtænkte og brugervenlige designs.
+        Samtidig lærte jeg at arbejde mere systematisk med udviklingsprocessen,
+        hvilket styrkede mine tekniske færdigheder og min forståelse af, hvordan
+        hjemmesiden opbygges, tilpasses og optimeres. Tema 2 gav mig et solidt
+        fundament inden for webudvikling, som jeg senere har bygget videre på
+        gennem de efterfølgende temaer på uddannelsen.
+      </p>
+    </main>
+    <script>
+      const btn = document.getElementById("burgerBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      btn.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        btn.classList.toggle("open", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("open");
+          btn.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+    </script>
+  </body>
+</html>

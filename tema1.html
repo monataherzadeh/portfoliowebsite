@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/tema.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="icon" href="img/blomst1.svg" type="image/svg+xml" />
+    <title>Introuge</title>
+  </head>
+  <body>
+    <button class="burger-btn" id="burgerBtn" aria-label="Åbn menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="index.html" data-label="Forside">
+        <img src="img/blomst1.svg" alt="Forside" />
+      </a>
+      <a href="portfolio.html" data-label="Portfolio">
+        <img src="img/blomst2.svg" alt="Portfolio" />
+      </a>
+      <a href="omMig.html" data-label="Om mig">
+        <img src="img/blomst3.svg" alt="Om mig" />
+      </a>
+    </nav>
+
+    <header>
+      <nav class="flower-nav">
+        <a class="nav-flower" href="index.html" data-label="Forside">
+          <img src="img/blomst1.svg" alt="Forside" />
+        </a>
+        <a class="nav-flower" href="portfolio.html" data-label="Portfolio">
+          <img src="img/blomst2.svg" alt="Portfolio" />
+        </a>
+        <a class="nav-flower" href="omMig.html" data-label="Om mig">
+          <img src="img/blomst3.svg" alt="Om mig" />
+        </a>
+      </nav>
+    </header>
+
+    <div class="background-flowers">
+      <img src="img/blomst3.svg" alt="" class="flower flower1" />
+      <img src="img/blomst2.svg" alt="" class="flower flower2" />
+      <img src="img/blomst1.svg" alt="" class="flower flower3" />
+    </div>
+
+    <main>
+      <h1>Introuge</h1>
+      <p>
+        Tema 1 fungerede som en introduktion til multimediedesigneruddannelsen
+        og gav mig en forståelse af, hvilke fagområder og arbejdsopgaver der
+        indgår i uddannelsen.
+      </p>
+      <h2>Ugeopgave</h2>
+      <p>
+        Som en del af introugen arbejdede vi i grupper med en ugeopgave, der
+        havde til formål at styrke samarbejdet og lære vores medstuderende bedre
+        at kende. Opgaven bestod i at planlægge, optage og redigere en video,
+        som skulle fungere som en titelsekvens til en tv-serie. Min gruppe
+        valgte at tage udgangspunkt i Paradise Hotel. Gennem opgaven fik jeg min
+        første erfaring med idéudvikling, planlægning af indhold samt samarbejde
+        i en kreativ proces.
+      </p>
+      <figure>
+        <img
+          class="tema-billede"
+          src="img/ugeopgave.webp"
+          alt="Screenshot fra Paradise Hotel titelsekvens"
+        />
+        <figcaption>Billede fra vores video</figcaption>
+      </figure>
+      <p>
+        <a
+          class="links"
+          href="https://www.youtube.com/watch?v=Miypx0VSh94"
+          target="_blank"
+        >
+          Se vores video her
+        </a>
+      </p>
+      <h2>Præsentationskort</h2>
+      <p>
+        I tema 1 blev jeg introduceret til Figma gennem en opgave, hvor jeg
+        skulle designe et digitalt præsentationskort om en medstuderende.
+        Opgavens formål var at få prøvet nogle af de grundlæggende værktøjer af,
+        som vi seneres fik brug for på uddannelsen.
+      </p>
+      <p>
+        <a
+          class="linksMinus"
+          href="https://www.figma.com/board/5CNHreWHeRgR59ZXeQ7MjV/Pr%C3%A6sentationskort?node-id=0-1&t=FPlF7lgROOc5kuuK-1"
+          target="_blank"
+        >
+          Se mit præsentationskort her
+        </a>
+      </p>
+      <h2>Mit første domæne</h2>
+      <p>
+        Derudover blev vi introduceret til GitHub og GitHub Pages, hvor vi
+        oprettede vores første domæne. Selvom fokus ikke var på design eller
+        avanceret udvikling, gav opgaven mig en grundlæggende forståelse af
+        publicering en hjemmeside og få af de teknologier, som senere blev
+        centrale i resten af semesterets projekter
+      </p>
+      <p>
+        <a
+          class="linksMinus"
+          href="https://monataherzadeh.github.io/myFirstRepo/"
+          target="_blank"
+        >
+          Se mit første domæne her
+        </a>
+      </p>
+    </main>
+
+    <script>
+      const btn = document.getElementById("burgerBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      btn.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        btn.classList.toggle("open", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("open");
+          btn.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+    </script>
+  </body>
+</html>

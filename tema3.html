@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/tema.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="icon" href="img/blomst1.svg" type="image/svg+xml" />
+    <title>Grundlæggende UX/UI</title>
+  </head>
+  <body>
+    <button class="burger-btn" id="burgerBtn" aria-label="Åbn menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="index.html" data-label="Forside">
+        <img src="img/blomst1.svg" alt="Forside" />
+      </a>
+      <a href="portfolio.html" data-label="Portfolio">
+        <img src="img/blomst2.svg" alt="Portfolio" />
+      </a>
+      <a href="omMig.html" data-label="Om mig">
+        <img src="img/blomst3.svg" alt="Om mig" />
+      </a>
+    </nav>
+
+    <header>
+      <nav class="flower-nav">
+        <a class="nav-flower" href="index.html" data-label="Forside">
+          <img src="img/blomst1.svg" alt="Forside" />
+        </a>
+        <a class="nav-flower" href="portfolio.html" data-label="Portfolio">
+          <img src="img/blomst2.svg" alt="Portfolio" />
+        </a>
+        <a class="nav-flower" href="omMig.html" data-label="Om mig">
+          <img src="img/blomst3.svg" alt="Om mig" />
+        </a>
+      </nav>
+    </header>
+
+    <div class="background-flowers">
+      <img src="img/blomst3.svg" alt="" class="flower flower1" />
+      <img src="img/blomst2.svg" alt="" class="flower flower2" />
+      <img src="img/blomst1.svg" alt="" class="flower flower3" />
+    </div>
+
+    <main>
+      <h1>Grundlaeggende UX/UI</h1>
+      <p>
+        I tema 3 blev jeg introduceret til grundlæggende UX/UI, som handler om
+        samspillet mellem brugere og digitale brugergrænseflader. Her fik jeg en
+        forståelse for, hvordan research, design, prototyping og brugertests kan
+        bruges til at udvikle brugervenlige løsninger. Derudover fik jeg
+        erfaring med at dokumentere og præsentere hele min designproces fra idé
+        til færdig løsning.
+      </p>
+      <h2>Min løsning</h2>
+      <p>
+        I dette tema skulle vi udvikle en hjemmeside om et selvvalgt emne. Jeg
+        valgte at undersøge forholdet mellem bøger og deres filmatiseringer for
+        at finde ud af, om bogen faktisk er bedre end filmen. Derfor kaldte jeg
+        min hjemmeside <i>"Var bogen bedre?"</i>. Under udviklingen af sitet
+        anvendte jeg de metoder, vi havde lært i undervisningen, herunder
+        research, design, prototyping og brugertests. På baggrund af min
+        research udarbejdede jeg moodboards, wireframes og digitale prototyper i
+        Figma.
+      </p>
+      <p>
+        Undervejs gennemførte jeg brugertests, blandt andet tænke-højt-test og
+        5-sekunders-test, for at få indsigt i brugernes oplevelse af sitet.
+        Resultaterne brugte jeg til at forbedre designet gennem iterationer og
+        skabe en mere brugervenlig løsning. Efter at have testet og
+        videreudviklet min prototype begyndte jeg at kode hjemmesiden i HTML og
+        CSS og omsatte dermed mine designidéer til et færdigt produkt.
+      </p>
+      <figure>
+        <img
+          class="tema-billede"
+          src="img/tema3.webp"
+          alt="Screenshot af forsiden på mit emnesite"
+        />
+        <figcaption>Et billede af forsiden på mit emnesite</figcaption>
+      </figure>
+      <p>
+        <a
+          class="links"
+          href="https://monataherzadeh.github.io/emnesite/"
+          target="_blank"
+        >
+          Besøg mit emnesite her
+        </a>
+      </p>
+      <h2>Min læring</h2>
+      <p>
+        En af de vigtigste læringer, jeg fik fra dette tema, var, at mine egne
+        idéer ikke nødvendigvis stemmer overens med brugernes behov og
+        forventninger. Gennem brugertests fik jeg konkrete indsigter, som gjorde
+        det muligt at forbedre både design og funktionalitet. Det gav mig en
+        større forståelse for værdien af iterative processer, hvor en løsning
+        løbende udvikles og optimeres på baggrund af feedback.
+      </p>
+      <p>
+        Jeg lærte også vigtigheden af at arbejde struktureret gennem
+        designprocessen. Hvis research, idéudvikling og planlægning ikke er på
+        plads fra starten, kan det gøre den videre udvikling mere udfordrende.
+        Temaet gav mig derfor en bedre forståelse for, hvordan de forskellige
+        faser i en designproces hænger sammen, og hvorfor det er vigtigt at
+        arbejde i den rette rækkefølge.
+      </p>
+      <!-- <p>
+        Gennem præsentationer og feedback fra undervisere og medstuderende blev
+        jeg desuden opmærksom på områder, hvor min hjemmeside kunne forbedres.
+        Jeg fik blandt andet feedback om at præsentere flere bøger på forsiden,
+        gøre begrebet "univers" mere tydeligt og overveje, om sammenligningen
+        mellem bog og film var den mest relevante vinkel. Denne feedback lærte
+        mig, hvor vigtigt det er at teste og diskutere sine idéer med andre, da
+        nye perspektiver ofte kan føre til forbedringer af den endelige løsning.
+      </p> -->
+    </main>
+    <script>
+      const btn = document.getElementById("burgerBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      btn.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        btn.classList.toggle("open", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("open");
+          btn.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+    </script>
+  </body>
+</html>

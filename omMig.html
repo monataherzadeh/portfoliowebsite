@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/omMig.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="icon" href="img/blomst1.svg" type="image/svg+xml" />
+    <title>Om mig</title>
+  </head>
+  <body>
+    <button class="burger-btn" id="burgerBtn" aria-label="Åbn menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="index.html" data-label="Forside">
+        <img src="img/blomst1.svg" alt="Forside" />
+      </a>
+      <a href="portfolio.html" data-label="Portfolio">
+        <img src="img/blomst2.svg" alt="Portfolio" />
+      </a>
+      <a href="omMig.html" data-label="Om mig">
+        <img src="img/blomst3.svg" alt="Om mig" />
+      </a>
+    </nav>
+
+    <header>
+      <nav class="flower-nav">
+        <a class="nav-flower" href="index.html" data-label="Forside">
+          <img src="img/blomst1.svg" alt="Forside" />
+        </a>
+        <a class="nav-flower" href="portfolio.html" data-label="Portfolio">
+          <img src="img/blomst2.svg" alt="Portfolio" />
+        </a>
+        <a class="nav-flower" href="omMig.html" data-label="Om mig">
+          <img src="img/blomst3.svg" alt="Om mig" />
+        </a>
+      </nav>
+    </header>
+
+    <div class="background-flowers">
+      <img src="img/blomst3.svg" alt="" class="flower flower1" />
+      <img src="img/blomst2.svg" alt="" class="flower flower2" />
+      <img src="img/blomst1.svg" alt="" class="flower flower3" />
+    </div>
+
+    <main>
+      <h1>Mona Taherzadeh</h1>
+      <h2>Hej, jeg hedder Mona!</h2>
+      <p class="p1">
+        Jeg er studerende på Multimediedesigneruddannelsen på 1. semester på
+        Erhvervsakademi København. Før jeg begyndte på uddannelsen, studerede
+        jeg til datamatiker. Selvom jeg fandt programmering spændende, savnede
+        jeg den kreative del af arbejdet, og derfor valgte jeg at skifte til
+        multimediedesign.
+      </p>
+      <p class="p2">
+        På 1. semester har jeg arbejdet med både design og udvikling af digitale
+        løsninger. Jeg har blandt andet opnået erfaring med:
+      </p>
+      <ul>
+        <li>HTML, CSS og JavaScript</li>
+        <li>Figma</li>
+        <li>Adobe Illustrator og vektorgrafik</li>
+        <li>Adobe Photoshop</li>
+        <li>Adobe After Effects</li>
+        <li>GitHub og GitHub Pages</li>
+      </ul>
+      <p class="p3">
+        Gennem semesteret har jeg fået en større forståelse for brugercentreret
+        design, designprocesser og betydningen af at arbejde iterativt med
+        feedback og test. Jeg har lært at kombinere mine tekniske kompetencer
+        med kreative metoder for at udvikle brugervenlige digitale løsninger.
+        Min største interesse ligger fortsat inden for frontend-udvikling, hvor
+        jeg kan forene design og programmering i samme proces.
+      </p>
+      <img
+        class="profilbillede"
+        src="img/profilbillede1.webp"
+        alt="Portræt af Mona"
+      />
+    </main>
+    <footer>
+      <p>
+        Email:
+        <a href="mailto:monataherzadeh05@gmail.com"
+          >monataherzadeh05@gmail.com</a
+        >
+        · Github:
+        <a href="https://github.com/monataherzadeh">monataherzadeh</a>
+      </p>
+    </footer>
+    <script>
+      const btn = document.getElementById("burgerBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      btn.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        btn.classList.toggle("open", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("open");
+          btn.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+    </script>
+  </body>
+</html>

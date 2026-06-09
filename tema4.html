@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/tema.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="icon" href="img/blomst1.svg" type="image/svg+xml" />
+    <title>Grundlæggende brugergrænseflade</title>
+  </head>
+  <body>
+    <button class="burger-btn" id="burgerBtn" aria-label="Åbn menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="index.html" data-label="Forside">
+        <img src="img/blomst1.svg" alt="Forside" />
+      </a>
+      <a href="portfolio.html" data-label="Portfolio">
+        <img src="img/blomst2.svg" alt="Portfolio" />
+      </a>
+      <a href="omMig.html" data-label="Om mig">
+        <img src="img/blomst3.svg" alt="Om mig" />
+      </a>
+    </nav>
+
+    <header>
+      <nav class="flower-nav">
+        <a class="nav-flower" href="index.html" data-label="Forside">
+          <img src="img/blomst1.svg" alt="Forside" />
+        </a>
+        <a class="nav-flower" href="portfolio.html" data-label="Portfolio">
+          <img src="img/blomst2.svg" alt="Portfolio" />
+        </a>
+        <a class="nav-flower" href="omMig.html" data-label="Om mig">
+          <img src="img/blomst3.svg" alt="Om mig" />
+        </a>
+      </nav>
+    </header>
+
+    <div class="background-flowers">
+      <img src="img/blomst3.svg" alt="" class="flower flower1" />
+      <img src="img/blomst2.svg" alt="" class="flower flower2" />
+      <img src="img/blomst1.svg" alt="" class="flower flower3" />
+    </div>
+
+    <main>
+      <h1>Grundlaeggende<br />brugergraenseflade</h1>
+      <p>
+        I tema 4 blev jeg introduceret til mere avancerede frontend-teknologier
+        som JavaScript og CSS Custom Properties. Gennem temaets opgaver lærte
+        jeg, hvordan JavaScript kan bruges til at skabe interaktive funktioner
+        på en hjemmeside, og hvordan CSS Custom Properties kan gøre styling mere
+        overskuelig og genanvendelig.
+      </p>
+      <p>
+        Derudover begyndte jeg at arbejde med GitHub branches, hvilket gav mig
+        en bedre forståelse for organisering af kode. Jeg blev også introduceret
+        til Adobe Illustrator og vektorgrafik.
+      </p>
+      <h2>Min løsning</h2>
+      <p>
+        Opgaven i dette tema gik ud på at videreudvikle et eksisterende
+        Emergency Site, hvor vi selv skulle vælge en nødsituation og tilpasse
+        design, indhold og funktionalitet til vores eget koncept. Jeg valgte
+        emnet <i>"Er jeg et spøgelse?"</i>, som fungerede som en humoristisk
+        guide til at hjælpe brugeren med at finde ud af, om de var et spøgelse
+        eller ej.
+      </p>
+      <p>
+        Først udviklede jeg en interaktiv infografik i Adobe Illustrator, som
+        efterfølgende blev implementeret på sitet ved hjælp af JavaScript.
+        Herefter kodede jeg en webformular, hvor brugeren kunne besvare
+        forskellige spørgsmål og få svar relateret til sitets tema.
+      </p>
+      <p>
+        Som næste trin udviklede jeg forsiden, som skulle fungere som en
+        breaking news-side. Til sidst implementerede jeg en dark mode-funktion.
+      </p>
+      <figure>
+        <img
+          class="tema-billede"
+          src="img/tema4.webp"
+          alt="Screenshot fra mit emergency sites infografik"
+        />
+        <figcaption>Et billede af min infografik</figcaption>
+      </figure>
+      <p>
+        <a
+          class="links"
+          href="https://monataherzadeh.github.io/emergencysite/"
+          target="_blank"
+        >
+          Besøg mit emergency site her
+        </a>
+      </p>
+      <h2>Min læring</h2>
+      <p>
+        En af de vigtigste læringer fra tema 4 var betydningen af at arbejde
+        struktureret gennem hele udviklingsprocessen. I tema 3 arbejdede jeg med
+        research, prototyping og brugertests, hvilket gav mig en tydelig retning
+        for projektet. I tema 4 oplevede jeg derimod, at jeg manglede noget af
+        denne struktur, og derfor havde jeg sværere ved at omsætte mine idéer
+        til en løsning, jeg var helt tilfreds med. Efterfølgende har jeg
+        reflekteret over min arbejdsproces og indset, hvor stor betydning
+        planlægning og struktur har for det endelige resultat. Selvom jeg ikke
+        var fuldt tilfreds med løsningen, lærte jeg meget af oplevelsen, og den
+        har gjort mig mere bevidst om, hvordan jeg arbejder bedst i fremtidige
+        projekter.
+      </p>
+      <!-- <p>
+        Fagligt var temaet samtidig meget lærerigt. Jeg fik en god forståelse
+        for JavaScript, CSS Custom Properties og Adobe Illustrator, og jeg
+        oplevede, hvordan disse værktøjer kan bruges til at skabe mere
+        interaktive og visuelle brugeroplevelser. Temaet lærte mig derfor ikke
+        kun nye tekniske færdigheder, men også vigtigheden af en velstruktureret
+        arbejdsproces, hvilket er en erfaring, jeg har taget med mig videre.
+      </p> -->
+    </main>
+    <script>
+      const btn = document.getElementById("burgerBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      btn.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        btn.classList.toggle("open", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("open");
+          btn.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+    </script>
+  </body>
+</html>

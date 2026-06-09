@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/tema.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="icon" href="img/blomst1.svg" type="image/svg+xml" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <button class="burger-btn" id="burgerBtn" aria-label="Åbn menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="index.html" data-label="Forside">
+        <img src="img/blomst1.svg" alt="Forside" />
+      </a>
+      <a href="portfolio.html" data-label="Portfolio">
+        <img src="img/blomst2.svg" alt="Portfolio" />
+      </a>
+      <a href="omMig.html" data-label="Om mig">
+        <img src="img/blomst3.svg" alt="Om mig" />
+      </a>
+    </nav>
+
+    <header>
+      <nav class="flower-nav">
+        <a class="nav-flower" href="index.html" data-label="Forside">
+          <img src="img/blomst1.svg" alt="Forside" />
+        </a>
+        <a class="nav-flower" href="portfolio.html" data-label="Portfolio">
+          <img src="img/blomst2.svg" alt="Portfolio" />
+        </a>
+        <a class="nav-flower" href="omMig.html" data-label="Om mig">
+          <img src="img/blomst3.svg" alt="Om mig" />
+        </a>
+      </nav>
+    </header>
+
+    <div class="background-flowers">
+      <img src="img/blomst3.svg" alt="" class="flower flower1" />
+      <img src="img/blomst2.svg" alt="" class="flower flower2" />
+      <img src="img/blomst1.svg" alt="" class="flower flower3" />
+    </div>
+
+    <main>
+      <h1>Portfolio</h1>
+      <p>
+        Tema 6 er portfolioeksamen og fungerer som afslutningen på 1. semester.
+        I dette tema udviklede jeg den portfoliohjemmeside, som du læser nu.
+        Formålet med portfolioen var at samle mine projekter, min læring og mine
+        refleksioner fra hele semesteret i én samlet løsning.
+      </p>
+      <p>
+        Gennem arbejdet med portfolioen har jeg haft mulighed for at anvende
+        mange af de værktøjer, metoder og teknologier, jeg har lært på
+        uddannelsen. Jeg har arbejdet med både design, frontend-udvikling,
+        indholdsstruktur og brugeroplevelse for at skabe en hjemmeside, der
+        præsenterer mit arbejde på en overskuelig og brugervenlig måde.
+      </p>
+      <h2>Min løsning</h2>
+      <p>
+        Jeg har udviklet denne hjemmeside fra bunden ved hjælp af HTML, CSS og
+        JavaScript. Sitet består af en forside, en portfoliosektion med mine
+        projekter fra 1. semester samt en <i>Om mig</i>-side, der præsenterer
+        min baggrund og mine interesser.
+      </p>
+      <p>
+        I udviklingsprocessen havde jeg fokus på at skabe et portfolio, der
+        afspejler mig som person og samtidig præsenterer mit arbejde på en
+        overskuelig og brugervenlig måde. Derfor undersøgte jeg forskellige
+        portfoliohjemmesider for inspiration og arbejdede med struktur,
+        navigation og visuel identitet, inden jeg begyndte at kode løsningen.
+      </p>
+      <p>
+        Designet blev udviklet med udgangspunkt i de metoder og principper, jeg
+        har lært gennem semesteret, herunder mobile-first, responsivt design,
+        visuel hierarki, navigation og brugervenlighed. Undervejs testede og
+        justerede jeg løbende designet for at sikre, at indholdet var let at
+        finde og forstå.
+      </p>
+      <div class="billede-grid">
+        <figure>
+          <img
+            class="tema-billede"
+            src="img/styletile.webp"
+            alt="Styletile for mit portfolio"
+          />
+          <figcaption>Mit styletile for portfolioet</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            class="tema-billede"
+            src="img/moodboard.webp"
+            alt="Moodboard for mit portfolio"
+          />
+          <figcaption>Mit moodboard for portfolioet</figcaption>
+        </figure>
+      </div>
+      <div class="link-row">
+        <a
+          class="links"
+          href="https://www.figma.com/design/PfyxeDHYZYglZb3pRjvwUl/Portfolioeksamen?node-id=0-1&t=eWZiL37iPzhK5XGi-1"
+          target="_blank"
+        >
+          Besøg min Figma Design her
+        </a>
+        <a
+          class="links"
+          href="https://www.figma.com/board/nTFkvUgBwapdinEXDRbrYR/Portfolioeksamen?node-id=0-1&t=bFNbR7MWUkTuYrvI-1"
+          target="_blank"
+        >
+          Besøg min FigJam her
+        </a>
+      </div>
+
+      <h2>Min læring</h2>
+      <p>
+        Tema 6 gav mig mulighed for at samle og reflektere over det sidste halve
+        år på uddannelsen. Det har været en værdifuld proces, fordi man hurtigt
+        kan glemme de projekter og erfaringer, man har gjort sig tidligere på
+        semesteret.
+      </p>
+      <p>
+        Gennem arbejdet med portfolioen fik jeg mulighed for at vende tilbage
+        til mine tidligere projekter og reflektere over, hvad jeg faktisk har
+        lært undervejs. Det gjorde mig mere bevidst om min faglige udvikling og
+        gav mig et bedre overblik over, hvordan mine kompetencer inden for
+        design, brugeroplevelse og frontend-udvikling har udviklet sig gennem
+        semesteret.
+      </p>
+      <p></p>
+    </main>
+    <script>
+      const btn = document.getElementById("burgerBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      btn.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        btn.classList.toggle("open", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("open");
+          btn.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+    </script>
+  </body>
+</html>

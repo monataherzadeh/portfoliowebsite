@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="icon" href="img/blomst1.svg" type="image/svg+xml" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <button class="burger-btn" id="burgerBtn" aria-label="Åbn menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="index.html" data-label="Forside">
+        <img src="img/blomst1.svg" alt="Forside" />
+      </a>
+      <a href="portfolio.html" data-label="Portfolio">
+        <img src="img/blomst2.svg" alt="Portfolio" />
+      </a>
+      <a href="omMig.html" data-label="Om mig">
+        <img src="img/blomst3.svg" alt="Om mig" />
+      </a>
+    </nav>
+
+    <header>
+      <nav class="flower-nav">
+        <a class="nav-flower" href="index.html" data-label="Forside">
+          <img src="img/blomst1.svg" alt="Forside" />
+        </a>
+        <a class="nav-flower" href="portfolio.html" data-label="Portfolio">
+          <img src="img/blomst2.svg" alt="Portfolio" />
+        </a>
+        <a class="nav-flower" href="omMig.html" data-label="Om mig">
+          <img src="img/blomst3.svg" alt="Om mig" />
+        </a>
+      </nav>
+    </header>
+
+    <div class="background-flowers">
+      <img src="img/blomst3.svg" alt="" class="flower flower1" />
+      <img src="img/blomst2.svg" alt="" class="flower flower2" />
+      <img src="img/blomst1.svg" alt="" class="flower flower3" />
+    </div>
+
+    <main class="portfolio-main">
+      <section class="portfolio-intro">
+        <h1>Portfolio</h1>
+        <p class="intro-text">
+          Her finder du en oversigt over de temaer, vi har arbejdet med på 1.
+          semester.
+        </p>
+      </section>
+
+      <section class="tema-grid">
+        <article class="tema-card">
+          <span class="tema-nr">Tema 01</span>
+          <h2>Introuge</h2>
+          <a href="tema1.html" class="se-mere-knap">Se mere</a>
+        </article>
+
+        <article class="tema-card">
+          <span class="tema-nr">Tema 02</span>
+          <h2>Web</h2>
+          <a href="tema2.html" class="se-mere-knap">Se mere</a>
+        </article>
+
+        <article class="tema-card">
+          <span class="tema-nr">Tema 03</span>
+          <h2>UX/UI</h2>
+          <a href="tema3.html" class="se-mere-knap">Se mere</a>
+        </article>
+
+        <article class="tema-card">
+          <span class="tema-nr">Tema 04</span>
+          <h2>Brugergraensefladeudvikling</h2>
+          <a href="tema4.html" class="se-mere-knap">Se mere</a>
+        </article>
+
+        <article class="tema-card">
+          <span class="tema-nr">Tema 05</span>
+          <h2>Indhold</h2>
+          <a href="tema5.html" class="se-mere-knap">Se mere</a>
+        </article>
+
+        <article class="tema-card">
+          <span class="tema-nr">Tema 06</span>
+          <h2>Portfolio</h2>
+          <a href="tema6.html" class="se-mere-knap">Se mere</a>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      const btn = document.getElementById("burgerBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      btn.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        btn.classList.toggle("open", isOpen);
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("open");
+          btn.classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+    </script>
+  </body>
+</html>
